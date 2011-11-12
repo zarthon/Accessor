@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IIIT Hyderabad -->
+<plugin
+   id="domainidentifier"
+   name="Domain Identifier - Tourism and Health"
+   version="3.0.0"
+   provider-name="IIIT-H">
+
+    <runtime>
+      <library name="domainidentifier.jar">
+         <export name="*"/>
+      </library>
+      <library name="weka.jar" />
+   </runtime>
+
+   <requires>
+      <import plugin="nutch-extensionpoints"/>
+      <import plugin="indianlangidentifier"/>
+   </requires>
+<!--
+   <extension id="net.iiit.siel.analysis.domain.DomainParserFilter"
+              name="Domain Parser Filter"
+              point="org.apache.nutch.parse.HtmlParseFilter">
+      <implementation id="DomainParserFilter"
+                      class="net.iiit.siel.analysis.domain.DomainParserFilter"/>
+   </extension>
+
+   <extension id="net.iiit.siel.analysis.domain.DomainIndexingFilter"
+              name="Domain identifier filter"
+              point="org.apache.nutch.indexer.IndexingFilter">
+      <implementation id="DomainIndexingFilter"
+                      class="net.iiit.siel.analysis.domain.DomainIndexingFilter"/>
+   </extension>
+-->
+
+   <extension id="net.iiit.siel.analysis.domain.DomainQueryFilter"
+              name="Domain Query Filter"
+              point="org.apache.nutch.searcher.QueryFilter">
+      <implementation id="DomainQueryFilter"
+                      class="net.iiit.siel.analysis.domain.DomainQueryFilter">
+        <parameter name="raw-fields" value="domain"/>
+	<parameter name="domain" value="GENERAL"/>
+      </implementation>
+   </extension>
+
+
+</plugin>
+

@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<!-- HTTP Properties -->
+
+<property>
+  <name>http.proxy.host</name>
+  <value>10.144.150.125</value>
+  <description>The proxy hostname.  If empty, no proxy is used.</description>
+</property>
+
+<property>
+  <name>http.proxy.port</name>
+  <value>3581</value>
+  <description>The proxy port.</description>
+</property>
+
+<!-- transliteration Resources -->
+
+<property>
+<name>english_data</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/transliteration_data/CLIA_eng_names_CC_Combined.txt</value>
+</property>
+
+<property>
+<name>hindi_data</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/transliteration_data/Hindi_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>telugu_data</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/transliteration_data/Telugu_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>bengali_data</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/transliteration_data/Bengali_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>tamil_data</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/transliteration_data/Tamil_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>punjabi_data</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/transliteration_data/Punjabi_Eng_romanization_scheme.txt</value>
+</property>
+
+<!-- Dictionary Resources -->
+
+<property>
+<name>database</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/database</value>
+</property>
+
+<!-- Searcher Properties -->
+
+<property>
+  <name>searcher.dir</name>
+  <value>/userdata/CLIA/vishalv/backup/clia/Latest_Crawl_6_7_09</value>
+<!--  <value>/media/CFILT_CLIA/CDACPune_700MB</value>-->
+ <!-- <value>/home/clia/Crawl-DVDs/mergeCrawl_PRSG-5</value>-->
+  <description>
+  Path to root of crawl.  This directory is searched (in
+  order) for either the file search-servers.txt, containing a list of
+  distributed search servers, or the directory "index" containing
+  merged indexes, or the directory "segments" containing segment
+  indexes.
+  </description>
+</property>
+
+<!-- Plugin Properties -->
+
+<property>
+  <name>plugin.includes</name>
+  <value>lib-punstem|il2eng-transliteration|protocol-(file|http)|multidictsearcher|urlfilter-regex|parse-(text|js|cml)|indianlangidentifier|index-cml|analysis-(hi|bn|te|mr|pa|ta)|query-translation-(mr|bn|pa|hin|tel|ta)|snippet-generation|scoring-opic|urlnormalizer-(pass|regex|basic)|metasearch-(yahoo|msn|google)|snippet-translation|unl-utils|analysis-unl-ta|enconversion-unl-ta|generator-unl-ta|template-unl|index-unl|search-unl|languageidentifier|rerank-unl</value>
+  <description>Regular expression naming plugin directory names to
+  include.  Any plugin not matching this expression is excluded.
+  In any case you need at least include the nutch-extensionpoints plugin. By
+  default Nutch includes crawling just HTML and plain text via HTTP,
+  and basic indexing and search plugins. In order to use HTTPS please enable
+  protocol-httpclient, but be aware of possible intermittent problems with the
+  underlying commons-httpclient library.
+  </description>
+</property>
+
+<!-- Snippet Translation Resources -->
+
+<property>
+<name>snippet_resource_path</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource</value>
+</property>
+
+<!-- Stop Words files -->
+
+<property>
+<name>bengali_analysis_dir</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/src/plugin/analysis-bn/lib</value>
+</property>
+
+<property>
+<name>hindi_stop_words</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/hindi_stop_words.txt</value>
+</property>
+
+<property>
+<name>bengali_stop_words</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/bengali_stop_words.txt</value>
+</property>
+
+<property>
+<name>telugu_stop_words</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/te/telugu_stop_words.txt</value>
+</property>
+
+<property>
+<name>tamil_stop_words</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/ta/stop_words_ta.txt</value>
+</property>
+
+<property>
+<name>punjabi_stop_words</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/punjabi_stop_words.txt</value>
+</property>
+
+<property>
+<name>english_stop_words</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/english_stop_words.txt</value>
+</property>
+
+<property>
+<name>marathi_stop_words</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/marathi_stop_words.txt</value>
+</property>
+
+<!-- Transliteration files -->
+
+<property>
+<name>query.ben2eng</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/ben2eng.txt</value>
+</property>
+
+<property>
+<name>Tel2Eng_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/te/tel2eng.txt</value>
+</property>
+
+<property>
+<name>Tel2Hin_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/te/tel2hin.txt</value>
+</property>
+
+<property>
+<name>Pun2Hin_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/pun2hin.txt</value>
+</property>
+
+<property>
+<name>Mar2Hin_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/mar2hin.txt</value>
+</property>
+
+<property>
+<name>Hin2Eng_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/hin2eng.txt</value>
+</property>
+
+<property>
+<name>Mar2Eng_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/mar2eng.txt</value>
+</property>
+
+<property>
+<name>Pun2Eng_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/pun2eng.txt</value>
+</property>
+
+<property>
+<name>Tam2Eng_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/tam2eng.txt</value>
+</property>
+
+<property>
+<name>Tam2Hin_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/tam2hin.txt</value>
+</property>
+
+<!-- Transliteration Dictionary files -->
+
+<property>
+<name>Tel2Eng_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/te/tel2eng_par.txt</value>
+</property>
+
+<property>
+<name>Hin2Eng_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/hin2eng_par.txt</value>
+</property>
+
+<property>
+<name>Mar2Eng_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/mar2eng_par.txt</value>
+</property>
+
+<property>
+<name>Ben2Eng_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/ben2eng_par.txt</value>
+</property>
+
+<property>
+<name>Ben2Hin_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/ben2hin_par.txt</value>
+</property>
+
+<property>
+<name>Tam2Eng_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/tam2eng_par.txt</value>
+</property>
+
+<property>
+<name>Pun2Eng_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/pun2eng_par.txt</value>
+</property>
+
+<property>
+<name>Pun2Hin_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/pun2hin_par.txt</value>
+</property>
+
+
+<property>
+<name>Tam2Hin_Par_dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/tam2hin_par.txt</value>
+</property>
+
+<property>
+  <name>tourism_health</name>
+  <value>/home/clia/vishalv/clia-iitb/clia-beta-working/tourism_health</value>
+</property>
+
+<!-- Analyzer files -->
+
+<property>
+  <name>telugu_stem_index</name>
+  <value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/te/telugu_stem_index.jar</value>
+</property>
+
+<property>
+  <name>telugu_suffix_index</name>
+  <value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/te/telugu_suffix_index.jar</value>
+</property>
+
+<property>
+  <name>StemmerConfig</name>
+  <value>/home/clia/vishalv/clia-iitb/clia-beta-working/src/plugin/analysis-mr/lib/marathiConfig</value>
+</property>
+
+<property>
+  <name>MarathiStemmerBasedir</name>
+  <value>/home/clia/vishalv/clia-iitb/clia-beta-working/src/plugin/analysis-mr/lib/</value>
+</property>
+
+<property>
+  <name>HindiStemmerConfig</name>
+  <value>/home/clia/vishalv/clia-iitb/clia-beta-working/src/plugin/analysis-hi/lib/hindiConfig</value>
+</property>
+
+<property>
+  <name>HindiStemmerBasedir</name>
+  <value>/home/clia/vishalv/clia-iitb/clia-beta-working/src/plugin/analysis-hi/lib/</value>
+</property>
+
+
+
+<property>
+<name>punjabi.analyzer.dictionary</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/newdictObject</value>
+</property>
+
+<property>
+<name>tamil_resource_dir</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/ta/ta-files</value>
+</property>
+
+<!-- NER files -->
+
+<property>
+<name>NER_bn</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/NER_bn.txt</value>
+</property>
+
+<property>
+<name>NER_ta</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/NER_ta.txt</value>
+</property>
+
+<property>
+<name>NER_tel</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/NER_tel.txt</value>
+</property>
+
+<property>
+<name>NER_pa</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/NER_pa.txt</value>
+</property>
+
+<property>
+<name>NER_hi</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/NER_hi.txt</value>
+</property>
+
+<property>
+<name>NER_mr</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/NER_mr.txt</value>
+</property>
+
+<!-- MWE files -->
+
+<property>
+<name>MWE_list</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/MWE_list.txt</value>
+</property>
+
+<property>
+<name>MWE_bn</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/MWE_bn.txt</value>
+</property>
+
+<property>
+<name>MWE_ta</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/MWE_ta.txt</value>
+</property>
+
+<property>
+<name>MWE_tel</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/te/MWE_tel.txt</value>
+</property>
+
+<property>
+<name>MWE_pa</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/MWE_pa.txt</value>
+</property>
+
+<property>
+<name>MWE_hi</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/MWE_hi.txt</value>
+</property>
+
+<property>
+<name>MWE_mr</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/MWE_mr.txt</value>
+</property>
+
+
+<property>
+<name>UNLTamilDocuments</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/unl/tamil/input/documents</value>
+</property>
+
+<property>
+<name>UNLTamilUrls</name>
+<value>/home/clia/vishalv/clia-iitb/clia-beta-working/resource/unl/tamil/input/urls</value>
+</property>
+
+<property>
+<name>Mar-Translit-Moses</name>
+<value>/home/clia/Software/apache-tomcat/TranslitConfig/moses-mar.ini</value>
+</property>
+
+<property>
+<name>Ben-Translit-Moses</name>
+<value>/home/clia/Software/apache-tomcat/TranslitConfig/moses-ben.ini</value>
+</property>
+
+<property>
+<name>Tam-Translit-Moses</name>
+<value>/home/clia/Software/apache-tomcat/TranslitConfig/moses-tam.ini</value>
+</property>
+
+<property>
+<name>Tel-Translit-Moses</name>
+<value>/home/clia/Software/apache-tomcat/TranslitConfig/moses-tel.ini</value>
+</property>
+
+<property>
+<name>Pun-Translit-Moses</name>
+<value>/home/clia/Software/apache-tomcat/TranslitConfig/moses-pun.ini</value>
+</property>
+
+<property>
+<name>Translit-Config</name>
+<value>/home/clia/Software/apache-tomcat/TranslitConfig/translitConfig</value>
+</property>
+
+</configuration>

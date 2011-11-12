@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="query-mwe"
+   name="MWE Query Filter"
+   version="0.0.1"
+   provider-name="IIITH">
+
+   <runtime>
+      <!-- As defined in build.xml this plugin will end up bundled as recommended.jar -->
+      <library name="query-mwe.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="nutch-extensionpoints"/>
+	<import plugin="query-ner"/>
+   </requires>
+
+   <!-- The MweQueryFilter --> 
+   <extension id="org.apache.nutch.searcher.QueryFilter"
+              name="MWE Query Filter"
+              point="org.apache.nutch.searcher.QueryFilter">
+      <implementation id="MWEQueryFilter"
+                      class="org.apache.nutch.searcher.mwe.MWEQueryFilter">
+     <parameter name="fields" value="DEFAULT"/>
+	<parameter name="lang" value="DEFAULT"/>
+        </implementation>
+   </extension>
+
+</plugin>

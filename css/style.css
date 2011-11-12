@@ -1,0 +1,220 @@
+/* CSS Document */
+body
+{
+margin-top:0px;
+margin-left:0px;
+margin-right:0px;
+margin-bottom:0px;
+}
+
+.a1
+{
+	padding: 4px 0.5em;
+	margin-left: 3px;
+	border: 1px solid #778;
+	border-bottom: none;
+	border-top: none;
+	background: #FFFFCC;
+	text-decoration: none;
+}
+
+.a1:hover
+{
+	color: #000;
+	background: #FFCC00;
+	border: 1px solid #778;
+	border-top: none;
+	border-bottom: none;
+	border-color: #227;
+}
+
+.a1:link
+{
+	color: #448;
+}
+
+.a1:visited
+{
+	color: #667;
+}
+
+.navigation
+{
+	text-align: center;
+	font: 12px Verdana, sans-serif;
+	color: teal;
+	width: 100%;
+	padding: 0px 0px 1em 0px;
+}
+
+.navigation:hover
+{
+	text-align: center;
+	font: 12px Verdana, sans-serif;
+	background: #AAE;
+	color: #000;
+	width: 100%;
+	padding: 0px 0px 0.5em 0px;
+}
+
+.navigation:visited
+{
+	color:teal;
+	text-align: center;
+	font: 12px Verdana, sans-serif;
+	width: 100%;
+	padding: 0, 0, 0.5em, 0;
+}
+
+.text
+{
+border-style:solid;
+border-width:1px;
+border-color:#333333;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.ellipsis {
+  font-weight: bold;
+}
+
+hr
+{
+color:#999999;
+}
+
+.combo
+{
+font-size:18px;
+width:80px;
+}
+
+body { background-color: white; }
+.panel { border: solid 1px black; background-color: white; padding: 5px;}
+
+
+/* for tool tip */
+
+#dhtmltooltip{
+position: absolute;
+left: -300px;
+width: 150px;
+border: 1px solid black;
+padding: 2px;
+background-color: lightyellow;
+visibility: hidden;
+z-index: 100;
+/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+}
+
+#dhtmlpointer{
+position:absolute;
+left: -300px;
+z-index: 101;
+visibility: hidden;
+}
+
+
+/******************************************************************************
+* Additional styles.                                                          *
+******************************************************************************/
+
+h4#title {
+  background-color: #503080;
+  border: 1px solid #000000;
+  border-color: #7050a0 #b090e0 #b090e0 #7050a0;
+  color: #d0b0ff;
+  font-weight: bold;
+  margin-top: 0em;
+  margin-bottom: .5em;
+  padding: 2px .5em 2px .5em;
+}
+
+
+/******************************************************************************
+* Styles for the tabbed displays.                                             *
+******************************************************************************/
+
+/*-----------------------------------------------------------------------------
+  Note: The border-radius property is a proposed feature for CSS3 which creates
+        rounded corners. Mozilla/Netscape browsers currently support this
+        feature via the proprietary -moz-border-radius property. Both are
+        defined here. Browsers that support neither should simply ignore them.
+-----------------------------------------------------------------------------*/
+
+
+a.tab {
+  background-color: #d0b0ff;
+  border: 2px solid #000000;
+  border-bottom-width: 0px;
+  border-color: #f0d0ff #b090e0 #b090e0 #f0d0ff;
+  -moz-border-radius: .75em .75em 0em 0em;
+  border-radius-topleft: .75em;
+  border-radius-topright: .75em;
+  padding: 2px 1em 2px 1em;
+  position: relative;
+  text-decoration: none;
+  top: 3px;
+  z-index: 100;
+}
+
+a.tab, a.tab:visited {
+  color: #8060b0;
+}
+
+
+a.tab.activeTab, a.tab.activeTab:hover, a.tab.activeTab:visited {
+  background-color: #9070c0;
+  border-color: #b090e0 #7050a0 #7050a0 #b090e0;
+  color: #ffe0ff;
+}
+
+a.tab.activeTab {
+  padding-bottom: 4px;
+  top: 1px;
+  z-index: 102;
+}
+
+
+div.tabIframeWrapper {
+  width: 100%;
+}
+
+a.tab:hover {
+  background-color: #a080d0;
+  border-color: #c0a0f0 #8060b0 #8060b0 #c0a0f0;
+  color: #ffe0ff;
+}
+/*iframe.tabContent {
+  background-color: #9070c0;
+  border: 1px solid #000000;
+  border-color: #7050a0 #b090e0 #b090e0 #7050a0;
+  width: 100%;
+  height: 36ex;
+}
+*/
+/******************************************************************************
+* Additional styles.                                                          *
+******************************************************************************/
+
+h4#title {
+  background-color: #503080;
+  border: 1px solid #000000;
+  border-color: #7050a0 #b090e0 #b090e0 #7050a0;
+  color: #d0b0ff;
+  font-weight: bold;
+  margin-top: 0em;
+  margin-bottom: .5em;
+  padding: 2px .5em 2px .5em;
+}
+
+/****************************************************************************
+ * Div Style.
+ ***************************************************************************/
+a.title:link {color:#0000A0}
+a.title:visited{color:#FF9966}
+a.title:hover{color:#FF9966}
+

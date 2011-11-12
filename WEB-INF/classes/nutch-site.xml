@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+	<name>CLIA_HOME</name>
+	<value>/home/gaurav/CLIA/Sandhan1.1/</value>
+	<description>Absolute path to the CLIA system</description>
+</property>
+
+<!-- Searcher Properties -->
+
+<property>
+  <name>searcher.dir</name>
+  <value>/media/MISCSTUFF/CR_GUJ+AS+OR_21_sep_2011/index/</value>
+<!--  <value>/media/CFILT_CLIA/CDACPune_700MB</value>-->
+ <!-- <value>/home/clia/Crawl-DVDs/mergeCrawl_PRSG-5</value>-->
+  <description>
+  Path to root of crawl.  This directory is searched (in
+  order) for either the file search-servers.txt, containing a list of
+  distributed search servers, or the directory "index" containing
+  merged indexes, or the directory "segments" containing segment
+  indexes.
+  </description>
+</property>
+
+<property>
+<name>UNLCrawl</name>
+<value></value>
+</property>
+
+<!-- HTTP Properties -->
+
+<property>
+<name>http.agent.name</name>
+<value>Arjun</value>
+<description>
+</description>
+</property> 
+
+<property>
+  <name>http.proxy.host</name>
+  <value>10.201.13.50</value>
+  <description>The proxy hostname.  If empty, no proxy is used.</description>
+</property>
+
+<property>
+  <name>http.proxy.port</name>
+  <value>80</value>
+  <description>The proxy port.</description>
+</property>
+
+<property>
+<name>http.proxy.username</name>
+<value>atreya.arjun</value>
+</property>
+
+<property>
+<name>http.proxy.password</name>
+<value>25031985*</value>
+</property> 
+
+<property>
+<name>http.proxy.realm</name>
+<value></value>
+<description>
+</description>
+</property> 
+
+<property>
+  <name>http.useHttp11</name>
+  <value>true</value>
+  <description>NOTE: at the moment this works only for protocol-httpclient.
+  If true, use HTTP 1.1, if false use HTTP 1.0 .
+  </description>
+</property>
+
+<property>
+  <name>plugin.folders</name>
+  <value>plugins</value>
+  <description>Regular expression naming plugin directory names to
+  include.  Any plugin not matching this expression is excluded.
+  In any case you need at least include the nutch-extensionpoints plugin. By
+  default Nutch includes crawling just HTML and plain text via HTTP,
+  and basic indexing and search plugins. In order to use HTTPS please enable
+  protocol-httpclient, but be aware of possible intermittent problems with the
+  underlying commons-httpclient library.
+  </description>
+</property>
+
+<!-- transliteration Resources -->
+
+<property>
+<name>english_data</name>
+<value>${CLIA_HOME}/resource/transliteration_data/CLIA_eng_names_CC_Combined.txt</value>
+</property>
+
+<property>
+<name>hindi_data</name>
+<value>${CLIA_HOME}/resource/transliteration_data/Hindi_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>telugu_data</name>
+<value>${CLIA_HOME}/resource/transliteration_data/Telugu_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>bengali_data</name>
+<value>${CLIA_HOME}/resource/transliteration_data/Bengali_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>tamil_data</name>
+<value>${CLIA_HOME}/resource/transliteration_data/Tamil_Eng_romanization_scheme.txt</value>
+</property>
+
+<property>
+<name>punjabi_data</name>
+<value>${CLIA_HOME}/resource/transliteration_data/Punjabi_Eng_romanization_scheme.txt</value>
+</property>
+
+<!-- Dictionary Resources -->
+
+<property>
+<name>database</name>
+<value>${CLIA_HOME}/database</value>
+</property>
+
+<!-- Plugin Properties -->
+
+<property>
+  <name>plugin.includes</name>
+  <value>lib-punstem|il2eng-transliteration|protocol-(file|httpclient)|multidictsearcher|urlfilter-regex|parse-(cml|text|js)|index-(cml|unl)|analysis-(hi|bn|te|mr|pa|ta|gu|as)|query-translation-(mr|bn|pa|hin|tel|ta)|snippet-generation|scoring-opic|urlnormalizer-(pass|regex|basic)|metasearch-(yahoo|msn|google)|snippet-translation|unl-utils|analysis-unl-ta|enconversion-unl-ta|generator-unl-ta|template-unl|search-unl|rerank-unl|snippetgeneration-unl-ta|language-identifier</value>
+  <description>Regular expression naming plugin directory names to
+  include.  Any plugin not matching this expression is excluded.
+  In any case you need at least include the nutch-extensionpoints plugin. By
+  default Nutch includes crawling just HTML and plain text via HTTP,
+  and basic indexing and search plugins. In order to use HTTPS please enable
+  protocol-httpclient, but be aware of possible intermittent problems with the
+  underlying commons-httpclient library.
+  </description>
+</property>
+
+<!-- Snippet Translation Resources -->
+
+<property>
+<name>snippet_resource_path</name>
+<value>${CLIA_HOME}/resource</value>
+</property>
+
+<property>
+  <name>bengali_stemmer_resource</name>
+  <value>${CLIA_HOME}/resource/bn/stemmer</value>
+</property>
+
+<property>
+  <name>assamese_stemmer_resource</name>
+  <value>${CLIA_HOME}/resource/as/dict.txt</value>
+</property>
+
+<!-- Stop Words files -->
+
+<property>
+<name>bengali_analysis_dir</name>
+<value>${CLIA_HOME}/src/plugin/hindi/analysis-bn/lib</value>
+</property>
+
+<property>
+<name>hindi_stop_words</name>
+<value>${CLIA_HOME}/resource/hi/hindi_stop_words.txt</value>
+</property>
+
+<property>
+<name>bengali_stop_words</name>
+<value>${CLIA_HOME}/resource/bn/bengali_stop_words.txt</value>
+</property>
+
+<property>
+<name>telugu_stop_words</name>
+<value>${CLIA_HOME}/resource/te/telugu_stop_words.txt</value>
+</property>
+
+<property>
+<name>tamil_stop_words</name>
+<value>${CLIA_HOME}/resource/ta/stop_words_ta.txt</value>
+</property>
+
+<property>
+<name>punjabi_stop_words</name>
+<value>${CLIA_HOME}/resource/pa/punjabi_stop_words.txt</value>
+</property>
+
+<property>
+<name>english_stop_words</name>
+<value>${CLIA_HOME}/resource/en/english_stop_words.txt</value>
+</property>
+
+<property>
+<name>marathi_stop_words</name>
+<value>${CLIA_HOME}/resource/mr/marathi_stop_words.txt</value>
+</property>
+
+<property>
+<name>gujarati_stop_words</name>
+<value>${CLIA_HOME}/resource/gu/gujarati_stop_words.txt</value>
+</property>
+
+<property>
+  <name>assamese_stop_words</name>
+  <value>${CLIA_HOME}/resource/as/assamese_stop_words.txt</value>
+  <description></description>
+</property>
+
+<!-- Transliteration files -->
+
+<property>
+<name>query.ben2eng</name>
+<value>${CLIA_HOME}/resource/bn/ben2eng.txt</value>
+</property>
+
+<property>
+<name>Tel2Eng_dictionary</name>
+<value>${CLIA_HOME}/resource/te/tel2eng.txt</value>
+</property>
+
+<property>
+<name>Tel2Hin_dictionary</name>
+<value>${CLIA_HOME}/resource/te/tel2hin.txt</value>
+</property>
+
+<property>
+<name>Pun2Hin_dictionary</name>
+<value>${CLIA_HOME}/resource/pa/pun2hin.txt</value>
+</property>
+
+<property>
+<name>Mar2Hin_dictionary</name>
+<value>${CLIA_HOME}/resource/mr/mar2hin.txt</value>
+</property>
+
+<property>
+<name>Hin2Eng_dictionary</name>
+<value>${CLIA_HOME}/resource/hi/hin2eng.txt</value>
+</property>
+
+<property>
+<name>Mar2Eng_dictionary</name>
+<value>${CLIA_HOME}/resource/mr/mar2eng.txt</value>
+</property>
+
+<property>
+<name>Pun2Eng_dictionary</name>
+<value>${CLIA_HOME}/resource/pa/pun2eng.txt</value>
+</property>
+
+<property>
+<name>Tam2Eng_dictionary</name>
+<value>${CLIA_HOME}/resource/ta/tam2eng.txt</value>
+</property>
+
+<property>
+<name>Tam2Hin_dictionary</name>
+<value>${CLIA_HOME}/resource/ta/tam2hin.txt</value>
+</property>
+
+<!-- Transliteration Dictionary files -->
+
+<property>
+<name>Tel2Eng_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/te/tel2eng_par.txt</value>
+</property>
+
+<property>
+<name>Hin2Eng_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/hi/hin2eng_par.txt</value>
+</property>
+
+<property>
+<name>Mar2Eng_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/mr/mar2eng_par.txt</value>
+</property>
+
+<property>
+<name>Ben2Eng_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/bn/ben2eng_par.txt</value>
+</property>
+
+<property>
+<name>Ben2Hin_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/bn/ben2hin_par.txt</value>
+</property>
+
+<property>
+<name>Tam2Eng_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/ta/tam2eng_par.txt</value>
+</property>
+
+<property>
+<name>Pun2Eng_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/pa/pun2eng_par.txt</value>
+</property>
+
+<property>
+<name>Pun2Hin_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/pa/pun2hin_par.txt</value>
+</property>
+
+
+<property>
+<name>Tam2Hin_Par_dictionary</name>
+<value>${CLIA_HOME}/resource/ta/tam2hin_par.txt</value>
+</property>
+
+<property>
+  <name>tourism_health</name>
+  <value>${CLIA_HOME}/common/tourism_health</value>
+</property>
+
+<!-- Analyzer files -->
+
+<property>
+  <name>telugu_stem_index</name>
+  <value>${CLIA_HOME}/resource/te/telugu_stem_index.jar</value>
+</property>
+
+<property>
+  <name>telugu_suffix_index</name>
+  <value>${CLIA_HOME}/resource/te/telugu_suffix_index.jar</value>
+</property>
+
+<property>
+  <name>StemmerConfig</name>
+  <value>${CLIA_HOME}/src/plugin/marathi/analysis-mr/lib/marathiConfig</value>
+</property>
+
+<property>
+  <name>MarathiStemmerBasedir</name>
+  <value>${CLIA_HOME}/src/plugin/marathi/analysis-mr/lib/</value>
+</property>
+
+<property>
+  <name>HindiStemmerConfig</name>
+  <value>${CLIA_HOME}/src/plugin/hindi/analysis-hi/lib/hindiConfig</value>
+</property>
+
+<property>
+  <name>HindiStemmerBasedir</name>
+  <value>${CLIA_HOME}/src/plugin/hindi/analysis-hi/lib/</value>
+</property>
+
+<property>
+<name>punjabi.analyzer.dictionary</name>
+<value>${CLIA_HOME}/resource/pa/newdictObject</value>
+</property>
+
+<property>
+<name>tamil_resource_dir</name>
+<value>${CLIA_HOME}/resource/ta/ta-files</value>
+</property>
+
+<property>
+<name>resource_file_name</name>
+<value>${CLIA_HOME}/resource/gu/stemmer_resource</value>
+</property>
+
+<property>
+<name>yass.stemmer.filename</name>
+<value>${CLIA_HOME}/resource/gu/yassStemmerFile.txt</value>
+</property>
+
+<!-- NER files -->
+
+<property>
+<name>NER_bn</name>
+<value>${CLIA_HOME}/resource/bn/NER_bn.txt</value>
+</property>
+
+<property>
+<name>NER_ta</name>
+<value>${CLIA_HOME}/resource/ta/NER_ta.txt</value>
+</property>
+
+<property>
+<name>NER_te</name>
+<value>${CLIA_HOME}/resource/te/NER_te.txt</value>
+</property>
+
+<property>
+<name>NER_pa</name>
+<value>${CLIA_HOME}/resource/pa/NER_pa.txt</value>
+</property>
+
+<property>
+<name>NER_hi</name>
+<value>${CLIA_HOME}/resource/hi/NER_hi.txt</value>
+</property>
+
+<property>
+<name>NER_mr</name>
+<value>${CLIA_HOME}/resource/mr/NER_mr.txt</value>
+</property>
+
+<!-- MWE files -->
+
+<property>
+<name>MWE_en</name>
+<value>${CLIA_HOME}/resource/en/MWE_en.txt</value>
+</property>
+
+<property>
+<name>MWE_bn</name>
+<value>${CLIA_HOME}/resource/bn/MWE_bn.txt</value>
+</property>
+
+<property>
+<name>MWE_ta</name>
+<value>${CLIA_HOME}/resource/ta/MWE_ta.txt</value>
+</property>
+
+<property>
+<name>MWE_te</name>
+<value>${CLIA_HOME}/resource/te/MWE_te.txt</value>
+</property>
+
+<property>
+<name>MWE_pa</name>
+<value>${CLIA_HOME}/resource/pa/MWE_pa.txt</value>
+</property>
+
+<property>
+<name>MWE_hi</name>
+<value>${CLIA_HOME}/resource/hi/MWE_hi.txt</value>
+</property>
+
+<property>
+<name>MWE_mr</name>
+<value>${CLIA_HOME}/resource/mr/MWE_mr.txt</value>
+</property>
+
+
+<property>
+<name>UNLTamilDocuments</name>
+<value>${CLIA_HOME}/resource/unl/tamil/input/documents</value>
+</property>
+
+<property>
+<name>UNLTamilUrls</name>
+<value>${CLIA_HOME}/resource/unl/tamil/input/urls</value>
+</property>
+
+<property>
+<name>Mar-Translit-Moses</name>
+<value>${CLIA_HOME}/TranslitConfig/moses-mar.ini</value>
+</property>
+
+<property>
+<name>Ben-Translit-Moses</name>
+<value>${CLIA_HOME}/TranslitConfig/moses-ben.ini</value>
+</property>
+
+<property>
+<name>Tam-Translit-Moses</name>
+<value>${CLIA_HOME}/TranslitConfig/moses-tam.ini</value>
+</property>
+
+<property>
+<name>Tel-Translit-Moses</name>
+<value>${CLIA_HOME}/TranslitConfig/moses-tel.ini</value>
+</property>
+
+<property>
+<name>Pun-Translit-Moses</name>
+<value>${CLIA_HOME}/TranslitConfig/moses-pun.ini</value>
+</property>
+
+<property>
+<name>Translit-Config</name>
+<value>${CLIA_HOME}/TranslitConfig/translitConfig</value>
+</property>
+
+<!-- AU-CEG Paths -->
+<property>
+<name>SentenceExtraction</name>
+<value>${CLIA_HOME}/resource/unl/ta/SentenceExtraction/</value>
+</property>
+
+<property>
+<name>analyzer</name>
+<value>${CLIA_HOME}/resource/unl/ta/Analyser/</value>
+</property>
+
+<property>
+<name>unl-Graph</name>
+<value>${CLIA_HOME}/resource/unl/Enconversion/unl-graph/</value>
+</property>
+
+<property>
+<name>Template</name>
+<value>${CLIA_HOME}/resource/unl/Enconversion/unl-graph/</value>
+</property>
+
+<property>
+<name>unl_resource_Query_dir</name>
+<value>${CLIA_HOME}/resource/unl/Query/</value>
+</property>
+
+<property>
+<name>unl_resource_dir</name>
+<value>${CLIA_HOME}/resource/unl/</value>
+</property>
+
+<!-- Added for Font Transcoder - By Abhishek and Rajendra -->
+<property>
+<name>Font_Transcoder_Dir</name>
+<value>${CLIA_HOME}/resource/FontTranscoder</value>
+</property>
+
+<!-- Added for Language Identification - By Srikanth -->
+<property>
+<name>resources.indianlangidentifier.dir</name>
+<value>${CLIA_HOME}/resource/indianlangidentifier</value>
+</property>
+
+<property>
+<name>resources.domainidentifier.dir</name>
+<value>${CLIA_HOME}/resource/domainidentifier</value>
+</property>
+
+<property>
+<name>resources.snippetgeneration.dir</name>
+<value>${CLIA_HOME}/resource/snippet_generation_resource</value>
+</property>
+
+</configuration>

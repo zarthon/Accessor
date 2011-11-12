@@ -1,0 +1,57 @@
+/*
+ * date:	2002-10-13
+ * info:	http://inspire.server101.com/js/tp/
+ */
+
+/* links */
+ul.tabs {
+	width: 59px;
+        height: 323px;
+        margin-top: 55px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        float: left;
+}
+ul.tabs li {
+	position: relative;
+	float: left;
+	width: 6em;
+	margin: 0;
+	padding: 0 4px 0 0;
+}
+ul.tabs a {
+	display: block;
+	width: 5em;
+	padding: .5em;
+	border: 1px solid #00F;
+	border-bottom: none;
+	border-top-width: 2px;
+	text-decoration: none;
+}
+ul.tabs a, ul.tabs a:link, ul.tabs a:visited {
+	background: #EEF;
+	color: #00F;
+}
+ul.tabs a.active, ul.tabs a:link.active, ul.tabs a:visited.active {
+	background: #FFF;
+	color: #00F;
+	font-weight: bold;
+}
+ul.tabs a.active {
+	position: relative;
+	top: 1px;
+}
+
+/* panels */
+div.tabs {
+	padding: .5em;
+}
+div.tabs div.tabs {
+	padding: 0;
+}
+div.tabs div.tabs div {
+	clear: left;
+	padding: .5em;
+	border: 1px solid #00F;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IIIT Hyderabad -->
+<plugin
+   id="indianlangidentifier"
+   name="Indian Language Identification. Supports AS, BN, EN, GU, HI, MR, OR, PA, TA, TE"
+   version="2.1.0"
+   provider-name="IIIT-H">
+
+    <runtime>
+      <library name="indianlangidentifier.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="nutch-extensionpoints"/>
+   </requires>
+<!--
+   <extension id="net.iiit.siel.analysis.lang.LanguageParseFilter"
+              name="Indian language Parser"
+              point="org.apache.nutch.parse.HtmlParseFilter">
+      <implementation id="LanguageParser"
+                      class="net.iiit.siel.analysis.lang.LanguageParseFilter"/>
+   </extension>
+
+   <extension id="net.iiit.siel.analysis.lang"
+              name="Indian language identifier filter"
+              point="org.apache.nutch.indexer.IndexingFilter">
+      <implementation id="LanguageIdentifier"
+                      class="net.iiit.siel.analysis.lang.LanguageIndexingFilter"/>
+   </extension>
+-->
+
+   <extension id="net.iiit.siel.analysis.lang.LanguageQueryFilter"
+              name="Indian Language Query Filter"
+              point="org.apache.nutch.searcher.QueryFilter">
+      <implementation id="LanguageQueryFilter"
+                      class="net.iiit.siel.analysis.lang.LanguageQueryFilter">
+        <parameter name="raw-fields" value="lang"/>
+	<parameter name="lang" value="GENERAL"/>
+      </implementation>
+   </extension>
+
+
+</plugin>
+

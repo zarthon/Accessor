@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="index-cml"
+   name="Cmlified Indexer"
+   version="0.0.1"
+   provider-name="nutch.org">
+
+   <runtime>
+      <!-- As defined in build.xml this plugin will end up bundled as recommended.jar -->
+      <library name="index-cml.jar">
+         <export name="*"/>
+      </library>
+     <library name="hiStemmer.jar"/>
+     <library name="mrStemmer.jar"/>
+   </runtime>
+
+   <requires>
+      <import plugin="nutch-extensionpoints"/>
+      <import plugin="analysis-ta"/>
+      <import plugin="analysis-te"/>
+      <import plugin="analysis-hi"/>
+      <import plugin="analysis-bn"/>
+      <import plugin="analysis-mr"/>
+      <import plugin="analysis-pa"/>
+   </requires>
+
+   <!-- The Cmlified indexer extends the IndexingFilter to grab the contents of
+        any recommended meta tags -->
+ <extension id="org.apache.nutch.parse.cml.indexfilter"
+              name="Cmlified Indexer"
+              point="org.apache.nutch.indexer.IndexingFilter">
+      <implementation id="CmlIndexer"
+                      class="org.apache.nutch.parse.cml.CmlIndexer"/>
+   </extension>
+
+
+</plugin>
+
