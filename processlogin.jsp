@@ -36,9 +36,10 @@
 				else
 				{
 	                            out.println("WELCOME " + request.getParameter("user"));
-//        	                    out.println("<br><a href=\"reljudge_submitfile.jsp?user="+request.getParameter("user")+"\">click here to continue</a>");
-				    String redirectURL = "locale.jsp?"+lang;
-				    response.sendRedirect(redirectURL);
+                                //        	                    out.println("<br><a href=\"reljudge_submitfile.jsp?user="+request.getParameter("user")+"\">click here to continue</a>");
+
+            				    String redirectURL = "infomation.jsp";
+			            	    response.sendRedirect(redirectURL);
 
 				   
 				}
